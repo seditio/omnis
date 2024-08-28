@@ -1,0 +1,187 @@
+@import "vars.less";
+
+/* 0. Elements
+-------------------------------------------------- */
+
+body				{ font-family: @sans; font-size: .875rem; }
+
+a						{ text-decoration: none; .trans; }
+
+/* 2. Color Scheme Definitions
+-------------------------------------------------- */
+
+// :root {
+//   --color-bg: #000000;
+//   --color-fg: #ffffff;
+// }
+//
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --color-bg: #ffffff;
+//     --color-fg: #000000;
+//   }
+// }
+//
+// body {
+//   background-color: var(--color-bg);
+//   color: var(--color-fg);
+// }
+
+/* 3. Main Blocks
+-------------------------------------------------- */
+
+header#top												{ font-size: 1.25rem; line-height: 1.875rem; }
+
+	a#toggle_scheme,
+	a#toggle_search									{ cursor: pointer; }
+
+	a#toggle_scheme::before,
+	a#toggle_scheme::before					{ display: none; }
+
+footer#bot												{ padding: 2rem 0; }
+	footer#bot div.block						{ text-align: center; }
+	footer#bot div.block span.title	{ font-size: 1.125rem; font-weight: 500; margin-bottom: .75rem; }
+	footer#bot div.block p					{ font-size: .75rem; }
+
+h1									{ font-size: 2.25rem; }
+
+div.content_block		{ padding: 2rem 0; }
+
+div.brd_t						{ border-top: 2px solid; }
+div.brd_b						{ border-bottom: 2px solid; }
+
+aside#primary div.block			{ border-top: 2px solid; }
+
+div#adminblock ul > li > a	{ font-size: .6875rem; font-weight: 600; text-transform: uppercase; text-decoration: none; padding: .25rem .75rem; border-radius: 4px; display: block; }
+
+div#add_edit		{ background: #f9f9f9; }
+
+/* 4. Alerts
+-------------------------------------------------- */
+
+div.alert h4		{ font-size: 1.125rem; font-weight: 600; text-transform: uppercase; margin: 0 0 .25rem; }
+
+/* 7. Forms
+-------------------------------------------------- */
+
+div#search_panel input:focus,
+div#offcanvas input:focus			{ outline: 0 none; }
+
+.btn.btn-custom			{ font-size: .75rem; font-weight: 600; text-transform: uppercase; }
+
+/* 8. Modal Panels
+-------------------------------------------------- */
+
+div#search_panel		{ padding-top: 3rem; position: absolute; top: -100%; right: 0; left: 0; .trans; }
+
+	div#search_panel.active								{ top: 62px; }
+	div#search_panel form									{ border-bottom: 1px solid; }
+	div#search_panel form input						{ font-size: 1rem; padding: .5rem 0; background: none; border: 0; }
+	div#search_panel form button					{ font-size: 1rem; padding: .5rem 0; background: 0; border: 0; }
+
+div#offcanvas						{ padding: 1.125rem 1.75rem; width: 100%; scrollbar-width: thin; overflow-y: auto; position: fixed; top: 0; bottom: 0; left: -100%; .trans; }
+	div#offcanvas.active	{ left: 0; }
+
+	div#offcanvas input:focus	{ outline: 0 none; }
+	div#offcanvas input,
+	div#offcanvas button	{ background: none; border: 0; }
+
+/* 9. Pagination
+-------------------------------------------------- */
+
+.pagination		{ margin: 0; }
+
+.page-item:first-child .page-link	{ border-radius: 50%; }
+.page-item:last-child .page-link	{ border-radius: 50%; }
+
+.page-link				{ font-size: .75rem; line-height: 2.5rem; text-align: center; padding: 0; height: 2.5rem; width: 2.5rem; border: 0; border-radius: 50%; }
+.page-link:focus	{ box-shadow: 0 0 0 .2rem rgba(0,0,0,.25); }
+
+/* 10. Lists
+-------------------------------------------------- */
+
+ul#blog													{  }
+	ul#blog > li									{ margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid; }
+	ul#blog > li:last-child				{ margin-bottom: 0; padding-bottom: 0; border-bottom: 0!important; }
+	ul#blog > li.special a.title	{ font-size: 2rem!important; font-weight: 600!important; }
+
+ul#best													{ grid-template-columns: repeat(1, 1fr); }
+	ul#best a.title								{ font-size: 1.5rem; line-height: 1.1; }
+
+ul.meta								{  }
+	ul.meta > li				{ margin-right: 1.25rem; position: relative; .last0; }
+	ul.meta > li > *		{ font-size: .6875rem; }
+	ul.meta > li::after	{ content: ''; height: 3px; width: 3px; border-radius: 50%; position: absolute; top: 50%; right: -12px; }
+	ul.meta > li:last-child::after	{ display: none; }
+
+ul.meta_side									{  }
+	ul.meta_side > li						{ margin-right: 1rem; .last0; }
+	ul.meta_side > li > a,
+	ul.meta_side > li > span		{ font-size: .75rem; text-transform: uppercase; }
+	ul.meta_side > li > i				{ margin-right: .5rem; opacity: .5; }
+
+ul.entries										{  }
+	ul.entries > li							{ margin: 0 0 1rem; .last0; }
+	ul.entries > li > figure		{ border-radius: .625rem; flex: 0 0 4rem; }
+	ul.entries > li > div > a		{ font-size: .9375rem; }
+
+ul.comlist							{ grid-template-columns: repeat(1, 1fr); gap: 2rem; }
+	ul.comlist > li > p		{ font-size: .6875rem; }
+	ul.comlist > li > a		{ font-size: 1rem; }
+
+div#comments_block			{ padding: 3rem 0; }
+div#comments_new_block	{ padding: 3rem .5rem; }
+
+div.comments						{  }
+	div.comments figure		{ border-radius: 50%; overflow: hidden; flex: 0 0 4rem; }
+	div.comments-text > p	{ margin: 0 0 .25rem; .last0; }
+	div.comment						{ margin: 0 0 1.5rem; .last0; }
+
+ul.hashtags											{  }
+	ul.hashtags > li > a					{ line-height: 2rem; padding: 0 1.5rem; display: block; }
+	ul.hashtags > li > a::before	{ content: '#'; font-size: .75rem; margin-right: .25rem; opacity: .5; }
+
+ul#hashtags_mini										{  }
+	ul#hashtags_mini > li > a::before	{ content: '#'; font-size: .625rem; margin-right: .125rem; opacity: .5; }
+
+ul#hashtags_page										{  }
+	ul#hashtags_page > li > a:before	{ content: '#'; font-size: .625rem; margin-right: .125rem; opacity: .5; }
+
+ul#nav_mini							{  }
+	ul#nav_mini > li > a	{ font-size: 1.625rem; font-weight: 600; text-transform: uppercase; padding: .25rem 0; display: block; }
+
+ul.recent-search				{ grid-template-columns: repeat(4, 1fr); }
+	ul.recent-search a		{ .truncate(3); }
+
+ul.rubr_full											{  }
+	ul.rubr_full > li > span				{ height: 2rem; width: 2rem; }
+	ul.rubr_full > li > span > *		{ line-height: 2rem; display: block; .trans; }
+	ul.rubr_full > li > a:hover + span > span	{ margin-top: -2rem; }
+
+ul#archive_nav > li > a		{ line-height: 2rem; padding: 0 1rem; border-radius: 4px; display: block; }
+
+div#photo-gallery									{  }
+	div#photo-gallery > a::after				{ content: '\f00e'; color: @white; font-family: @fa; font-weight: 600; line-height: 2.5rem; text-align: center; width: 2.5rem; background: fade(@black, 60%); border-radius: 50%; position: absolute; top: 1rem; right: 1rem; visibility: hidden; opacity: 0; .trans; }
+	div#photo-gallery > a:hover::after	{ visibility: visible; opacity: 1; }
+
+/* 11. Misc
+-------------------------------------------------- */
+
+div.textbox							{ font-size: 1rem; }
+	div.textbox > *				{ margin: 0 0 .25rem; .last0; }
+	div.textbox > figure	{ margin: 1rem 0!important; }
+
+	div.textbox > blockquote				{ font-size: 2rem; line-height: 1.25; margin: 3rem 0; padding-left: 2rem; border-left: 1px solid; }
+	div.textbox > blockquote > *		{ margin: 0 0 .25rem; .last0; }
+	div.textbox > blockquote > cite	{ font-size: .8125rem; font-style: normal; font-weight: 600; text-transform: uppercase; margin: 2rem 0 0; display: block; }
+
+	.syntaxhighlighter-container		{ margin: 1rem 0!important; }
+
+a#ontop							{ line-height: 2rem; padding: 0 1rem; border-radius: 1rem; display: flex; align-items: center; position: fixed; right: -3rem; bottom: -1rem; rotate: -90deg; transform-origin: 0 0; .trans; z-index: 999; visibility: hidden; opacity: 0; }
+	a#ontop::after		{ content: 'Наверх'; font-size: .625rem; text-transform: uppercase; margin-left: .5rem; display: block; }
+	a#ontop.vis				{ bottom: 10rem; visibility: visible; opacity: 1; }
+
+p#legal		{ font-size: .75rem; }
+
+ul#attachments				{ grid-template-columns: repeat(1, 1fr); }
+	ul#attachments > li	{ background: rgba(0,0,0,.15); }

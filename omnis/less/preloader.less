@@ -1,0 +1,8 @@
+div#preloader						{ text-indent: -9999px; background: #fff; position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 9999; }
+	div#preloader::after	{ content: ''; height: 48px; width: 48px; border: 5px solid transparent; border-bottom-color: #fac0e2; border-radius: 50%; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); animation: rotation 1s linear infinite; }
+	@keyframes rotation		{
+		0%		{ transform: rotate(0deg); }
+		100%	{ transform: rotate(360deg); }
+	}
+
+body.dark_scheme div#preloader	{ background: rgb(20,20,20); }
