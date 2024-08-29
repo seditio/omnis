@@ -66,12 +66,15 @@
 
 	<div id="preloader">{PHP.L.theme-welcome} {PHP.L.theme-title}</div>
 
-	<header id="top" class="py-3 py-lg-4 mb-lg-5">
+	<header id="top" class="py-3 py-lg-4 mb-lg-4">
 		<div class="container">
 			<div class="row">
-				<div class="col d-flex justify-content-between">
+				<div class="col d-flex justify-content-between align-items-center">
 					<a href="#" class="px-3 d-block menu" id="toggle_offcanvas">{PHP.R.icon-ellipsis-vertical}</a>
-					<a href="{PHP.cfg.mainurl}" class="logo fw-medium">{PHP.L.theme-title} <sup>beta</sup></a>
+					<div class="text-center">
+						<a href="{PHP.cfg.mainurl}" class="logo fw-medium d-block">{PHP.L.theme-title}</a>
+						<p class="small lh-1 mt-1 mb-0">{PHP.L.theme-subtitle}</p>
+					</div>
 					<div class="actions d-flex">
 						<a href="#" class="me-2 me-lg-3 px-2 d-flex" id="toggle_scheme">
 							<span>{PHP.R.icon-sun}</span>

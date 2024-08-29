@@ -30,7 +30,10 @@ a						{ text-decoration: none; .trans; }
 /* 3. Main Blocks
 -------------------------------------------------- */
 
-header#top												{ font-size: 1.25rem; line-height: 1.875rem; }
+header#top														{ font-size: 1.25rem; line-height: 1.875rem; .trans; }
+	header#top p												{ display: none; }
+	body#scrolled-down header#top				{ position: sticky; top: -5rem; z-index: 1; }
+	body#scrolled-down header#top.stck	{ top: 0; }
 
 	a#toggle_scheme,
 	a#toggle_search									{ cursor: pointer; }
@@ -72,7 +75,7 @@ div#offcanvas input:focus			{ outline: 0 none; }
 /* 8. Modal Panels
 -------------------------------------------------- */
 
-div#search_panel		{ padding-top: 3rem; position: absolute; top: -100%; right: 0; left: 0; .trans; }
+div#search_panel		{ padding-top: 3rem; position: fixed; top: -100%; right: 0; left: 0; .trans; }
 
 	div#search_panel.active								{ top: 62px; }
 	div#search_panel form									{ border-bottom: 1px solid; }
@@ -80,7 +83,7 @@ div#search_panel		{ padding-top: 3rem; position: absolute; top: -100%; right: 0;
 	div#search_panel form button					{ font-size: 1rem; padding: .5rem 0; background: 0; border: 0; }
 
 div#offcanvas						{ padding: 1.125rem 1.75rem; width: 100%; scrollbar-width: thin; overflow-y: auto; position: fixed; top: 0; bottom: 0; left: -100%; .trans; }
-	div#offcanvas.active	{ left: 0; }
+	div#offcanvas.active	{ left: 0; z-index: 1; }
 
 	div#offcanvas input:focus	{ outline: 0 none; }
 	div#offcanvas input,

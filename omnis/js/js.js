@@ -85,16 +85,20 @@ $().ready(function() {
 
 $(window).scroll( function() {
 
+	$('div#search_panel, div#offcanvas').removeClass('active');
+
 	if ($(document).scrollTop() == 0) {
 		$('body').removeAttr('id');
 	} else {
 		$('body').attr('id', 'scrolled-down');
 	};
 
-	if ($(this).scrollTop() > 400) {
-		ontop.addClass('vis')
+	if ($(this).scrollTop() > 320) {
+		ontop.addClass('vis');
+		$('header#top').addClass('stck');
 	} else {
-		ontop.removeClass('vis')
+		ontop.removeClass('vis');
+		$('header#top').removeClass('stck');
 	};
 
 });
