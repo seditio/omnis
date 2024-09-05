@@ -13,7 +13,7 @@
       <div class="col-12 col-lg-4">
         <div class="block">
           <span class="title">{PHP.L.theme-rubricator}</span>
-          {PHP|sedby_catlist('catlist.footer', '', 'structure_path ASC', 'structure_code != "system"', 0, '', '', 'catlist_footer', 864000)}
+          {PHP|sedby_catlist('catlist.footer', '', 'structure_path ASC', 'structure_code != "system" and structure_area = "page"', 0, '', '', 'catlist_footer', 864000)}
         </div>
       </div>
       <div class="col-12 col-lg-3">

@@ -57,7 +57,7 @@
 							<div class="col-12 col-md-6 col-lg-12">
 								<div class="block pt-2 border-top border-2 border-black">
 									<span class="fw-bold text-uppercase mb-3 title">{PHP.L.theme-rubricator}:</span>
-									{PHP|sedby_catlist('catlist.page', 6, 'structure_path ASC', 'structure_code != "system"', 0, '', '', 'catlist_page', 864000)}
+									{PHP|sedby_catlist('catlist.page', 6, 'structure_path ASC', 'structure_code != "system" and structure_area = "page"', 0, '', '', 'catlist_page', 864000)}
 								</div>
 							</div>
 						</div>
