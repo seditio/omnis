@@ -4,11 +4,14 @@
 	<li class="d-md-flex flex-md-column">
 		<div class="overflow-hidden">
 			<figure>
-				<!-- IF {PAGE_ROW_ID|att_count('page', $this, 'images')} > 0 -->
-				<img src="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" alt="{PAGE_ROW_ID|att_get('page', $this, 'title')}" class="img-fluid" />
-				<!-- ELSE -->
-				<img src="https://via.placeholder.com/696x464" alt="" class="img-fluid" />
-				<!-- ENDIF -->
+				<picture>
+					<!-- IF {PAGE_ROW_ID|att_count('page', $this, 'images')} > 0 -->
+					<source srcset="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 320, 213, crop)}" media="(min-width: 992px)">
+					<img src="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" alt="{PAGE_ROW_ID|att_get('page', $this, 'title')}" class="img-fluid" />
+					<!-- ELSE -->
+					<img src="https://via.placeholder.com/696x464" alt="" class="img-fluid" />
+					<!-- ENDIF -->
+				</picture>
 			</figure>
 		</div>
 		<div class="flex-md-fill d-md-flex flex-md-column justify-content-md-between">

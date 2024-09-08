@@ -4,11 +4,14 @@
 	<li class="{PAGE_ROW_ODDEVEN} d-flex flex-column flex-lg-row justify-content-lg-between {PAGE_ROW_SPECIAL_CLASS}">
 		<div class="order-lg-last">
 			<figure class="mb-lg-0">
-				<!-- IF {PAGE_ROW_ID|att_count('page', $this, 'images')} > 0 -->
-				<img src="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" alt="{PAGE_ROW_ID|att_get('page', $this, 'title')}" class="img-fluid" />
-				<!-- ELSE -->
-				<img src="http://via.placeholder.com/696x464" alt="" class="img-fluid" />
-				<!-- ENDIF -->
+				<picture>
+					<!-- IF {PAGE_ROW_ID|att_count('page', $this, 'images')} > 0 -->
+					<source srcset="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 320, 213, crop)}" media="(min-width: 992px)">
+					<img src="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" alt="{PAGE_ROW_ID|att_get('page', $this, 'title')}" class="img-fluid" />
+					<!-- ELSE -->
+					<img src="http://via.placeholder.com/696x464" alt="" class="img-fluid" />
+					<!-- ENDIF -->
+				</picture>
 			</figure>
 		</div>
 		<div class="order-lg-first d-lg-flex flex-row me-lg-5">

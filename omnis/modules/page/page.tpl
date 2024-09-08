@@ -9,9 +9,15 @@
 					<h1 class="lh-1 fw-semibold reduced_width">{PAGE_TITLE}</h1>
 				</div>
 				<figure class="mb-4">
-					<!-- IF {PAGE_ID|att_count('page', $this, 'images')} > 0 -->
-					<img src="{PAGE_ID|att_get('page', $this)|att_thumb($this, 1200, 630, width)}" alt="{PAGE_ID|att_get('page', $this, 'title')}" class="img-fluid w-100" />
-					<!-- ENDIF -->
+					<picture>
+						<!-- IF {PAGE_ID|att_count('page', $this, 'images')} > 0 -->
+						<source srcset="{PAGE_ID|att_get('page', $this)|att_thumb($this, 1200, 630, crop)}" media="(min-width: 992px)">
+						<source srcset="{PAGE_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" media="(min-width: 768px)">
+						<img src="{PAGE_ID|att_get('page', $this)|att_thumb($this, 516, 516, crop)}" alt="{PAGE_ID|att_get('page', $this, 'title')}" class="img-fluid w-100" />
+						<!-- ELSE -->
+						<img src="http://via.placeholder.com/1200x630" alt="" class="img-fluid" />
+						<!-- ENDIF -->
+					</picture>
 				</figure>
 				<div class="d-lg-grid" id="page_grid">
 					<div class="d-flex flex-column justify-content-between mb-4 mb-lg-0">
