@@ -28,7 +28,7 @@
 	<!-- BEGIN: USERS -->
 								<tr>
 									<td>{USER_LINK}</td>
-									<td>{USER_MAINGRP}</td>
+									<td>{USER_MAIN_GROUP}</td>
 									<td>{USER_LOCATION} {USER_SUBLOCATION}</td>
 									<td>{USER_LASTSEEN}</td>
 	<!-- IF {PHP.usr.isadmin} -->
@@ -38,7 +38,8 @@
 	<!-- END: USERS -->
 	<!-- BEGIN: GUESTS -->
 								<tr>
-									<td colspan="2">{PHP.L.Guest} #{GUEST_NUMBER}</td>
+									<td>{PHP.L.Guest} #{GUEST_NUMBER}</td>
+									<td>{PHP.L.Guests}</td>
 									<td>{GUEST_LOCATION} {GUEST_SUBLOCATION}</td>
 									<td>{GUEST_LASTSEEN}</td>
 	<!-- IF {PHP.usr.isadmin} -->
