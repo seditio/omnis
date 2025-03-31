@@ -2,7 +2,7 @@
 /* ====================
 [BEGIN_COT_THEME]
 Name=Omnis
-Version=1.00b
+Version=1.01b
 Schemes=default:Default
 [END_COT_THEME]
 ==================== */

@@ -57,7 +57,7 @@
       <div class="mb-3 d-flex justify-content-between">
         <span class="small fw-bold text-uppercase title">{PHP.L.theme-hashtags-popular}:</span>
       </div>
-      {PHP|sedby_globaltags('pages', '16', 'Frequency', 'gt_open', 'globaltags', 86400)}
+      {PHP|sedby_globaltags('page', '16', 'tag', 'gt_open', 'globaltags', 86400)}
     </div>
     <div class="content_block brd_t mx-3 mb-lg-3 d-none d-lg-block">
       <div class="mb-3 d-flex justify-content-between">
@@ -84,13 +84,13 @@
         <li>
           <a href="{PHP|cot_url('page', 'c=system&al=blog')}">{PHP.L.Blog}</a>
         </li>
-        <!-- IF {PHP.cot_plugins_active.archive} -->
+        <!-- IF {PHP|cot_plugin_active('archive')} -->
         <li>
           <a href="{PHP|cot_url('archive')}">{PHP.L.Archives}</a>
         </li>
         <!-- ENDIF -->
         <li>
-          <!-- IF {PHP.cot_plugins_active.contact} -->
+          <!-- IF {PHP|cot_plugin_active('contact')} -->
           <a href="{PHP|cot_url('contact')}">{PHP.L.theme-contacts}</a>
           <!-- ELSE -->
           <a href="{PHP|cot_url('page', 'c=system&al=contacts')}">{PHP.L.theme-contacts}</a>
@@ -107,7 +107,7 @@
     </div>
     <div>
       <span class="subtitle fw-semibold mb-2 text-uppercase">{PHP.L.theme-hashtags-popular}:</span>
-      {PHP|sedby_globaltags('pages', '8', 'Frequency', 'gt_open_mini' '', 86400)}
+      {PHP|sedby_globaltags('page', '8', 'tag', 'gt_open_mini' '', 86400)}
     </div>
 </div>
 

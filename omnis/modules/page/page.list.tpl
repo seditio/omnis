@@ -61,9 +61,6 @@
 					</nav>
 					<!-- ENDIF -->
 
-					<!-- IF {PHP.cot_plugins_active.sape} AND {PHP|sape_check()} -->
-					<p class="text-center">{PHP|sape_show()}</p>
-					<!-- ENDIF -->
 				</div>
 			</div>
 		</div>

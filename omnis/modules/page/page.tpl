@@ -31,7 +31,7 @@
 					<aside id="primary" class="sidebar">
 						<div class="row">
 							<div class="col-12 col-md-6 col-lg-12">
-								<!-- IF {PHP.cot_plugins_active.reading_time} AND {PHP.usr.maingrp} == 5 -->
+								<!-- IF {PHP|cot_plugin_active('reading_time')} AND {PHP.usr.maingrp} == 5 -->
 								<div class="block mb-4 pt-2">
 									<span class="fw-bold text-uppercase mb-3 title">{PHP.L.theme-page-stats}:</span>
 									<ul class="list-unstyled" id="blog_post_meta">
@@ -77,12 +77,6 @@
 									<span class="fw-bold text-uppercase mb-3 title">{PHP.L.theme-best-posts}:</span>
 									{PHP|sedby_pagelist('pagelist.popular', 8, 'page_count DESC', 'page_cat != "system"', '', '', '', false, 0, '', '', 'pagelist_page_best', 864000)}
 								</div>
-								<!-- IF {PHP.cot_plugins_active.sape} AND {PHP|sape_check()} -->
-								<div class="block mb-4 pt-2">
-									<span class="fw-bold text-uppercase mb-3 title">{PHP.L.theme-partners}:</span>
-									{PHP|sape_show()}
-								</div>
-								<!-- ENDIF -->
 							</div>
 							<div class="col-12 col-md-6 col-lg-12">
 								<div class="block mb-4 pt-2">
@@ -104,7 +98,7 @@
 						{PHP.R.icon-chart-simple}
 						<span>{PAGE_HITS|cot_declension($this, 'theme-hits-markup')}</span>
 					</li>
-					<!-- IF {PHP.cot_plugins_active.reading_time} -->
+					<!-- IF {PHP|cot_plugin_active('reading_time')} -->
 					<li class="d-flex align-items-center">
 						{PHP.R.icon-clock}
 						<span>{PAGE_READING_TIME|cot_declension($this, 'theme-mins-markup')}</span>

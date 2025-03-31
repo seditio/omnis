@@ -11,9 +11,6 @@
           </div>
           {PHP|sedby_pagelist('pagelist.blog', 8, 'page_date DESC', 'page_cat != "system"', '', '', '', false, 0, '', '', 'pagelist_index_new', 86400)}
         </div>
-        <!-- IF {PHP.cot_plugins_active.sape} AND {PHP|sape_check()} -->
-        <p class="text-center">{PHP|sape_show()}</p>
-        <!-- ENDIF -->
       </div>
     </div>
     <div class="row">
@@ -36,18 +33,23 @@
         </div>
       </div>
     </div>
+    <!-- IF {INDEX_TAG_CLOUD} -->
     <div class="row">
       <div class="col">
         <div class="content_block brd_t">
           <div class="mb-3 d-flex justify-content-between">
             <h3 class="small fw-bold text-uppercase title">{PHP.L.theme-hashtags}</h3>
           </div>
-          <!-- IF {INDEX_TAG_CLOUD} -->
           {INDEX_TAG_CLOUD}
+          <!-- IF {INDEX_TAG_CLOUD_ALL_LINK} -->
+          <p class="small mb-0">
+            {INDEX_TAG_CLOUD_ALL_LINK}
+          </p>
           <!-- ENDIF -->
         </div>
       </div>
     </div>
+    <!-- ENDIF -->
     <!-- IF {PHP.usr.maingrp} == 5 -->
     {FILE "themes/{PHP.theme}/inc/admin-index.tpl"}
     <!-- ENDIF -->

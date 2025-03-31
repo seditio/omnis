@@ -47,12 +47,6 @@
 									<span class="fw-bold text-uppercase mb-3 title">{PHP.L.theme-best-posts}:</span>
 									{PHP|sedby_pagelist('pagelist.popular', 8, 'page_count DESC', '', '', '', '', false, 0, '', '', 'pagelist_page_best', 864000)}
 								</div>
-								<!-- IF {PHP|sape_check()} -->
-								<div class="block mb-4 pt-2 border-top border-2 border-black">
-									<span class="fw-bold text-uppercase mb-3 title">{PHP.L.theme-partners}:</span>
-									{PHP|sape_show()}
-								</div>
-								<!-- ENDIF -->
 							</div>
 							<div class="col-12 col-md-6 col-lg-12">
 								<div class="block pt-2 border-top border-2 border-black">
