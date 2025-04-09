@@ -9,7 +9,7 @@
 
 defined('COT_CODE') or die('Wrong URL.');
 
-$R['theme-version'] = 200;
+$R['theme-version'] = 201;
 
 $R['theme-facebook-link'] = '#';
 $R['theme-facebook-followers'] = 99;
