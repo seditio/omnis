@@ -25,6 +25,7 @@ $(document).ready(function() {
   $('input[name=rnewpass2]').addClass('form-control');
 
   $('input[name=rname]').addClass('form-control');
+  $('input[name=comment_author]').addClass('form-control222');
 
   $('input[name=remail]').addClass('form-control');
   $('textarea[name=rtext]:not(.minieditor)').addClass('form-control');

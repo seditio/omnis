@@ -1,6 +1,7 @@
 <!-- BEGIN: MAIN -->
 <main id="main">
   <div class="container">
+
     <div class="row">
       <div class="col">
         {FILE "{PHP.cfg.themes_dir}/{PHP.cfg.defaulttheme}/warnings.tpl"}
@@ -13,6 +14,7 @@
         </div>
       </div>
     </div>
+
     <div class="row">
       <div class="col">
         <div class="content_block brd_t">
@@ -33,6 +35,20 @@
         </div>
       </div>
     </div>
+
+    <!-- IF {PHP|cot_plugin_active(oneline)} -->
+    <div class="row">
+      <div class="col">
+        <div class="content_block brd_t">
+          <div class="mb-3 d-flex justify-content-between">
+            <h3 class="small fw-bold text-uppercase title">{PHP.L.theme-headline-news}</h3>
+          </div>
+          {PHP|sedby_oneline('oneline.list', 3, 'oneline_date DESC')}
+        </div>
+      </div>
+    </div>
+    <!-- ENDIF -->
+
     <!-- IF {INDEX_TAG_CLOUD} -->
     <div class="row">
       <div class="col">
@@ -50,9 +66,11 @@
       </div>
     </div>
     <!-- ENDIF -->
+
     <!-- IF {PHP.usr.maingrp} == 5 -->
     {FILE "themes/{PHP.theme}/inc/admin-index.tpl"}
     <!-- ENDIF -->
+
   </div>
 </main>
 <!-- END: MAIN -->

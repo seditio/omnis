@@ -65,6 +65,19 @@
 			</div>
 		</div>
 
+		<!-- IF {PHP|cot_plugin_active(oneline)} -->
+		<div class="row">
+			<div class="col">
+				<div class="content_block brd_t">
+					<div class="mb-3 d-flex justify-content-between">
+						<h3 class="small fw-bold text-uppercase title">{PHP.L.theme-headline-news}</h3>
+					</div>
+					{PHP.c|sedby_oneline('oneline.list', 3, 'oneline_date DESC', '', $this)}
+				</div>
+			</div>
+		</div>
+		<!-- ENDIF -->
+
 		<!-- IF {PHP.usr.isadmin} -->
 		{FILE "{PHP.cfg.themes_dir}/{PHP.theme}/inc/admin-list.tpl"}
 		<!-- ENDIF -->

@@ -9,7 +9,7 @@
 
 defined('COT_CODE') or die('Wrong URL.');
 
-$R['theme-version'] = 201;
+$R['theme-version'] = 203;
 
 $R['theme-facebook-link'] = '#';
 $R['theme-facebook-followers'] = 99;
@@ -27,6 +27,9 @@ $R['theme-instagram-followers'] = 99;
 $R['theme-telegram-link'] = '#';
 $R['theme-telegram-followers'] = 99;
 
+$res_ff_src = 'themes/omnis/js/fixforms.js';
+$res_ff_min = 'themes/omnis/js/fixforms.min.js';
+
 require_once cot_incfile('omnis', 'theme', 'rc.pagination');
 
 // Preloader
@@ -40,5 +43,8 @@ Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/modalbo
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/schemes.css?v=' . $R['theme-version'], 'css', 70);
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/js/schemes.js', 'js', 91);
 
-Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/js/fixforms.min.js', 'js', 90);
+(filectime($res_ff_src) > filectime($res_ff_min)) && file_put_contents($res_ff_min, Resources::minify(file_get_contents($res_ff_src), 'js'));
+Resources::linkFileFooter($res_ff_min . '?v=' . $R['theme-version'], 'js', 90);
+
+// Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/js/fixforms.min.js', 'js', 90);
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/js/js.js', 'js', 99);

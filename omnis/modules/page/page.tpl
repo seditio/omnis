@@ -113,6 +113,6 @@
 <!-- ENDIF -->
 
 	</div>
-	{PAGE_COMMENTS_DISPLAY}
+	{PAGE_COMMENTS}
 </main>
 <!-- END: MAIN -->

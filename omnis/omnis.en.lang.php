@@ -36,6 +36,8 @@ $L['theme-view-blog'] = 'View Blog';
 
 $L['theme-new-comments'] = 'New Comments';
 
+$L['theme-headline-news'] = 'Headline News';
+
 $L['theme-page-stats'] = 'Page Stats';
 $L['theme-page-stats-title'] = 'Title length';
 $L['theme-page-stats-desc'] = 'Description length';

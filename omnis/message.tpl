@@ -14,8 +14,12 @@
 					</p>
 					<div class="d-flex justify-content-center">
 <!-- BEGIN: MESSAGE_CONFIRM -->
-						<a id="confirmYes" href="{MESSAGE_CONFIRM_YES}" class="confirmButton btn btn-success btn-sm fw-bold mx-2 text-uppercase w-25">{PHP.L.Yes}</a>
-						<a id="confirmNo" href="{MESSAGE_CONFIRM_NO}" class="confirmButton btn btn-danger btn-sm bold fw-bold text-uppercase mx-2 w-25">{PHP.L.No}</a>
+						<a id="confirmYes" href="{MESSAGE_CONFIRM_YES}" class="confirmButton btn btn-success btn-sm fw-bold mx-2 text-uppercase w-25">
+							{PHP.L.Yes}
+						</a>
+						<a id="confirmNo" href="{MESSAGE_CONFIRM_NO}" class="confirmButton btn btn-danger btn-sm bold fw-bold text-uppercase mx-2 w-25">
+							{PHP.L.No}
+						</a>
 <!-- END: MESSAGE_CONFIRM -->
 					</div>
 				</div>
