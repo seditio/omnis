@@ -15,7 +15,7 @@
 						<source srcset="{PAGE_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" media="(min-width: 768px)">
 						<img src="{PAGE_ID|att_get('page', $this)|att_thumb($this, 516, 516, crop)}" alt="{PAGE_ID|att_get('page', $this, 'title')}" class="img-fluid w-100" />
 						<!-- ELSE -->
-						<img src="http://via.placeholder.com/1200x630" alt="" class="img-fluid" />
+						<img src="https://placehold.co/1200x630" alt="" class="img-fluid" />
 						<!-- ENDIF -->
 					</picture>
 				</figure>

@@ -9,7 +9,7 @@
 					<source srcset="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 320, 213, crop)}" media="(min-width: 992px)">
 					<img src="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" alt="{PAGE_ROW_ID|att_get('page', $this, 'title')}" class="img-fluid" />
 					<!-- ELSE -->
-					<img src="http://via.placeholder.com/696x464" alt="" class="img-fluid" />
+					<img src="https://placehold.co/696x464" alt="" class="img-fluid" />
 					<!-- ENDIF -->
 				</picture>
 			</figure>

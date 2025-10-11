@@ -24,7 +24,7 @@
 									<!-- IF {PLUGIN_PR_ID|att_count('page', $this, 'images')} > 0 -->
 									<img src="{PLUGIN_PR_ID|att_get('page', $this)|att_thumb($this, 696, 464, crop)}" alt="{PLUGIN_PR_ID|att_get('page', $this, 'title')}" class="img-fluid" />
 									<!-- ELSE -->
-									<img src="https://via.placeholder.com/696x464" alt="" class="img-fluid" />
+									<img src="https://placehold.co/696x464" alt="" class="img-fluid" />
 									<!-- ENDIF -->
 								</figure>
 							</div>

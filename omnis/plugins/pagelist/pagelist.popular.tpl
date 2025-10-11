@@ -5,6 +5,8 @@
 		<figure class="mb-0 me-3 overflow-hidden">
 			<!-- IF {PAGE_ROW_ID|att_count('page', $this, 'images')} > 0 -->
 			<img src="{PAGE_ROW_ID|att_get('page', $this)|att_thumb($this, 128, 128, crop)}" alt="{PAGE_ROW_ID|att_get('page', $this, 'title')}" class="img-fluid" />
+			<!-- ELSE -->
+			<img src="https://placehold.co/128x128" alt="" class="img-fluid" />
 			<!-- ENDIF -->
 		</figure>
 		<div class="">
