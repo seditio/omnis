@@ -36,7 +36,7 @@ $L['theme-view-blog'] = 'Весь блог';
 
 $L['theme-new-comments'] = 'Свежие комментарии';
 
-$L['theme-headline-news'] = 'Новости в одну строку';
+$L['theme-headline-news'] = 'В одну строку';
 
 $L['theme-page-stats'] = 'Статистика страницы';
 $L['theme-page-stats-title'] = 'Длина заголовка';

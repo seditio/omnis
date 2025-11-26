@@ -60,12 +60,12 @@
 									<td>{PHP.L.page_metadesc}:</td>
 									<td>{PAGEEDIT_FORM_METADESC}</td>
 								</tr>
-								<!-- BEGIN: TAGS -->
-								<tr>
-									<td>{PAGEEDIT_TOP_TAGS}:</td>
-									<td>{PAGEEDIT_FORM_TAGS} ({PAGEEDIT_TOP_TAGS_HINT})</td>
-								</tr>
-								<!-- END: TAGS -->
+								<!-- IF {PAGEEDIT_FORM_TAGS} -->
+		            <tr>
+		                <td>{PHP.L.Tags}:</td>
+		                <td>{PAGEEDIT_FORM_TAGS}</td>
+		            </tr>
+            		<!-- ENDIF -->
 								<!-- BEGIN: ADMIN -->
 								<tr>
 									<td>{PHP.L.Hits}:</td>

@@ -31,10 +31,6 @@ $R['gt_open_mini'] = '<ul class="list-unstyled lh-sm mb-0 d-flex flex-wrap row-g
 $R['userimg_img'] = '<img src="{$src}" alt="' . $L['Avatar'] . '" class="img-fluid {$class}" />';
 $R['userimg_default_avatar'] = '<img src="images/blank-avatar.png" alt="' . $L['Avatar'] . '" class="img-fluid" />';
 
-$R['comments_code_edit'] = '<li>' . $R['icon-pencil'] . '<a href="{$edit_url}" class="ms-2">' . Cot::$L['Edit'] . '</a> {$allowed_time}</li>';
-$R['comments_code_admin'] =  '<li>' . $R['icon-location-crosshairs'] . '<span class="ms-2">{$ipsearch}</span></li>';
-$R['comments_code_admin'] .= '<li>' . $R['icon-trash'] . '<a href="{$delete_url}" class="ms-2 confirmLink">' . Cot::$L['Delete'] . '</a></li>';
-
 $R['users_code_grplist_begin'] = '<ul class="list-unstyled mb-0">';
 $R['users_input_grplist_checkbox'] = '<input type="checkbox" class="checkbox ms-1 me-2" name="{$name}" value="1"{$checked}{$attrs} />';
 

@@ -9,7 +9,7 @@
 
 defined('COT_CODE') or die('Wrong URL.');
 
-$R['theme-version'] = 205;
+$R['theme-version'] = 214;
 
 $R['theme-facebook-link'] = '#';
 $R['theme-facebook-followers'] = 99;
@@ -39,6 +39,8 @@ Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'] . '/js/preloa
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/default.css?v=' . $R['theme-version'], 'css', 60);
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/responsive.css?v=' . $R['theme-version'], 'css', 61);
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/modalbox.css', 'css', 62);
+
+Resources::linkFile($cfg['themes_dir'] . '/' . $usr['theme'].'/css/forms.css?v=' . $R['theme-version'], 'css', 10);
 
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/schemes.css?v=' . $R['theme-version'], 'css', 70);
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/js/schemes.js', 'js', 91);

@@ -41,7 +41,15 @@
 														<li>
 															{PHP.R.icon-calendar}<span class="ms-2">{COMMENTS_ROW_DATE}</span>
 														</li>
-														{COMMENTS_ROW_ADMIN}{COMMENTS_ROW_EDIT}
+														<li>
+															{PHP.R.icon-location-crosshairs}<span class="ms-2">{COMMENTS_ROW_AUTHOR_IP}</span>
+														</li>
+														<li>
+															{PHP.R.icon-pencil}<a href="{COMMENTS_ROW_EDIT_URL}" class="ms-2">{PHP.L.Edit}</a>
+														</li>
+														<li>
+															{PHP.R.icon-trash}<a href="{COMMENTS_ROW_DELETE_URL}" class="ms-2 confirmLink">{PHP.L.Delete}</a>
+														</li>
 													</ul>
 													<div class="comments-text">
 														{COMMENTS_ROW_TEXT}
