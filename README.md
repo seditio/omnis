@@ -1,0 +1,1 @@
+Omnis theme was built using Bootstrap 5.3.3 and Fontawesome Free 6.5.2. Styles are written with LESS, resulting css-files are minimized. Development and testing were done using Cotonti 0.9.25 beta, all TPL-tags comply with the new naming.
