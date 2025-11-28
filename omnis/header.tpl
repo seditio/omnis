@@ -1,6 +1,6 @@
 <!-- BEGIN: HEADER -->
 <!DOCTYPE html>
-<html lang="{PHP.cfg.defaultlang}">
+<html>
 <head>
 {HEADER_GTM}
 

@@ -9,7 +9,7 @@
 
 defined('COT_CODE') or die('Wrong URL.');
 
-$R['theme-version'] = 214;
+$R['theme-version'] = 215;
 
 $R['theme-facebook-link'] = '#';
 $R['theme-facebook-followers'] = 99;
@@ -35,6 +35,10 @@ require_once cot_incfile('omnis', 'theme', 'rc.pagination');
 // Preloader
 Resources::linkFile($cfg['themes_dir'] . '/' . $usr['theme'] . '/css/preloader.css', 'css', 1);
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'] . '/js/preloader.js', 'js', 100);
+
+// Bootstrap
+Resources::linkFileFooter('lib/bootstrap/css/bootstrap.min.css', 'css', 49);
+Resources::linkFileFooter('lib/bootstrap/js/bootstrap.bundle.min.js', 'js', 98);
 
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/default.css?v=' . $R['theme-version'], 'css', 60);
 Resources::linkFileFooter($cfg['themes_dir'] . '/' . $usr['theme'].'/css/responsive.css?v=' . $R['theme-version'], 'css', 61);

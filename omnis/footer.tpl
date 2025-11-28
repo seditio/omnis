@@ -57,7 +57,7 @@
       <div class="mb-3 d-flex justify-content-between">
         <span class="small fw-bold text-uppercase title">{PHP.L.theme-hashtags-popular}:</span>
       </div>
-      {PHP|sedby_globaltags('page', '16', 'tag', 'gt_open', 'globaltags', 86400)}
+      {PHP|sedby_toptags('toptags.search', 10, 'toptags_search', 86400)}
     </div>
     <div class="content_block brd_t mx-3 mb-lg-3 d-none d-lg-block">
       <div class="mb-3 d-flex justify-content-between">
@@ -107,7 +107,7 @@
     </div>
     <div>
       <span class="subtitle fw-semibold mb-2 text-uppercase">{PHP.L.theme-hashtags-popular}:</span>
-      {PHP|sedby_globaltags('page', '8', 'tag', 'gt_open_mini' '', 86400)}
+      {PHP|sedby_toptags('toptags.side', 10, 'toptags_side', 86400)}
     </div>
 </div>
 
